@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>contactList</ion-title>
+    <ion-buttons slot='end'>
+      <ion-button (click)='openModal()'>
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content fullscreen>
+    <ion-grid>
+      <ion-row>
+      <ion-col size-xl='4' size-lg='4' size-md='6' size-md='6' size='12'>
+    <ion-list *ngFor='let contacts of contactInfo'>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img src="{{contacts.image}}"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h2>{{contacts.firstName}} {{contacts.lastName}}</h2>
+          <h2>{{contacts.email}}</h2>
+        </ion-label>
+      </ion-item>
+      </ion-list>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+    </ion-content>
+
+
