@@ -12,9 +12,8 @@ import { ContactService } from '../services/contact.service';
 export class ContactListPage implements OnInit {
 
   public contactInfo =[];
-  modalController: any;
 
-  constructor(private contactService:ContactService, private modalCtrl: ModalController) { }
+  constructor(private contactService:ContactService, public modalCtrl: ModalController) { }
 
   ngOnInit() {
     this.contactService.getContact().subscribe((data) => this.contactInfo=data);
